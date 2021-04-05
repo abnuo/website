@@ -3,7 +3,7 @@
 $dbconn = pg_connect(getenv("DATABASE_URL"));
 
 // Performing SQL query
-$query = 'SELECT *';
+$query = 'CREATE TABLE marios (\n	fart VARCHAR ( 50 ) NOT NULL \n);';
 $result = pg_query($query) or die('Query failed: ' . pg_last_error());
 
 // Printing results in HTML
