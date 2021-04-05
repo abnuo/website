@@ -1,6 +1,6 @@
 <?php
 // Connecting, selecting database
-$dbconn = pg_connect(getenv("DATABASE_URL"))
+$dbconn = pg_connect(getenv("DATABASE_URL"));
 
 // Performing SQL query
 $query = 'SELECT "I am a postgresql"';
