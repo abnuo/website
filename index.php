@@ -4,7 +4,7 @@ $dbconn = pg_connect(getenv("DATABASE_URL"));
     or die('Could not connect: ' . pg_last_error());
 
 // Performing SQL query
-$query = 'SELECT "I am a postgresqls';
+$query = 'SELECT "I am a postgresql"';
 $result = pg_query($query) or die('Query failed: ' . pg_last_error());
 
 // Printing results in HTML
