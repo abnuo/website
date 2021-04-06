@@ -15,5 +15,6 @@ echo "<p>$penis</p>";
 $word = explode('["', file_get_contents("https://random-word-api.herokuapp.com/word"))[1];
 $word2 = explode('["', file_get_contents("https://random-word-api.herokuapp.com/word"))[1];
 echo "<p>CONGRATS! You are lucky today.. Clicky click! <a href=\"http://$word-$word2.com\"</a>";
+?>
 </body>
 </html>
