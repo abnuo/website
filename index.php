@@ -1,25 +1,9 @@
-<?php
-// Connecting, selecting database
-$dbconn = pg_connect(getenv("DATABASE_URL"));
-
-// Performing SQL query
-$query = "ALTER TABLE fart \nADD COLUMN sexy VARCHAR";
-$result = pg_query($query) or die('Query failed: ' . pg_last_error());
-
-// Printing results in HTML
-echo "<table>\n";
-while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
-    echo "\t<tr>\n";
-    foreach ($line as $col_value) {
-        echo "\t\t<td>$col_value</td>\n";
-    }
-    echo "\t</tr>\n";
-}
-echo "</table>\n";
-
-// Free resultset
-pg_free_result($result);
-
-// Closing connection
-pg_close($dbconn);
-?>
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<h1>The WebSite Of An Abnuos</h1>
+<a href="/google.php">My google proxy</a>
+</body>
+</html>
