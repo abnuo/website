@@ -2,7 +2,7 @@
 <?php
 $marios = array("Danky", "Yeety", "Dankest", "Derpiest", "Memiest", "Doggo", "Boi", "Yeetus", "Among Us", "Sponge Adventure Bob", "Play Now");
 $randerp = shuffle($marios);
-$copy = $randerp
+$copy = $randerp;
 $url = implode("-", $randerp);
 $joinderp = implode(" ", $copy);
 echo "<a href=\"$url.com\">$joinderp</a>";
