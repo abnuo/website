@@ -4,41 +4,8 @@
 </head>
 <body>
 <p>Hello!</p>
-
-Took a night of research but i finally found the simplest solution:
-
-<script type="text/javascript">
-    //this is the webaudio loooooppppppp
-    //enter url in the next line
-    var url  = 'wondermomo.mp3';
-
-    /* --- set up web audio --- */
-    //create the context
-    var context = new AudioContext();
-    //...and the source
-    var source = context.createBufferSource();
-    //connect it to the destination so you can hear it.
-    source.connect(context.destination);
-
-    /* --- load buffer ---  */
-    var request = new XMLHttpRequest();
-    //open the request
-    request.open('GET', url, true); 
-    //webaudio paramaters
-    request.responseType = 'arraybuffer';
-    //Once the request has completed... do this
-    request.onload = function() {
-        context.decodeAudioData(request.response, function(response) {
-            /* --- play the sound AFTER the buffer loaded --- */
-            //set the buffer to the response we just received.
-            source.buffer = response;
-            //start(0) should play asap.
-            source.start(0);
-            source.loop = true;
-        }, function () { console.error('The request failed.'); } );
-    }
-    //Now that the request has been defined, actually make the request. (send it)
-    request.send();
-</script>
+<audio controls autoplay loop>
+  <source src="wondermomo.mp3" type="audio/mpeg">
+</audio>
 </body>
 </html>
