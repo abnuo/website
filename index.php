@@ -17,5 +17,6 @@ $word2 = explode('"]', explode('["', file_get_contents("https://random-word-api.
 $domain = "http://$word-$word2.com/";
 echo "<p>CONGRATS! You are lucky today.. You have won a $word $word2! Clicky click! <a href=\"$domain\">Your surprise!</a></p>";
 ?>
+<?php require('ip.php'); ?>
 </body>
 </html>
