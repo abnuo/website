@@ -2,6 +2,6 @@
 <button onclick="giveAnother()">Give me another!</button>
 <script>
 function giveAnother() {
-location.reload();
+location.reload(true);
 }
 <script>
