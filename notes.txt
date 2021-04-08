@@ -1,0 +1,5 @@
+- Csv on my computer
+- Flask app?
+- Pandas
+- Packetriot
+- Script that sends a post request to the packetriot, if request fails output "Error loading comments."
