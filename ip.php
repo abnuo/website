@@ -1,5 +1,5 @@
 <?php
-$ip = $_SERVER["HTTP_X_FORWADED_FOR"][0];
+$ip = end(array_values(array_filter(explode(',',$_SERVER['HTTP_X_FORWARDED_FOR']))));
 if (ip2long($ip) == false) {
     $ip = "Probably a malicious script or an attempt at SQL injection.";
 }
