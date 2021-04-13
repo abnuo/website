@@ -9,5 +9,5 @@ function generateRandomString($length = 10) {
     }
     return $randomString;
 }
-     echo "<a href=\"/index.php\">This session is being recorded.</a><hr><h1>Hello, visitor #" . generateRandomString() . "</h1>";
+     echo "<img src='/img/babysoft.jpg'></img><br><a href=\"/index.php\">This session is being recorded.</a><hr><h1>Hello, visitor #" . generateRandomString() . "</h1>";
 ?>
