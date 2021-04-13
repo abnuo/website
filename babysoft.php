@@ -9,5 +9,6 @@ function generateRandomString($length = 10) {
     }
     return $randomString;
 }
+     echo "<form action='placereq.php' method='post'><input type='text' name='Title'/><input type='submit' value='Apply Request'></form>";
      echo "<img src='/img/babysoft.jpg'></img><br><a href=\"/index.php\">This session is being recorded.</a><hr><h1>Hello, visitor #" . generateRandomString() . "</h1>";
 ?>
