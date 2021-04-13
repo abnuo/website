@@ -1,3 +1,3 @@
 <?php
-  echo "Creating request " . $_POST['title'] . "....";
+  echo "Creating request " . $_POST['Title'] . "....";
 ?>
