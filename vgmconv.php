@@ -1,4 +1,6 @@
 <h1>VGM Converter</h1>
+<p>Powered with <a href="https://github.com/digital-sound-antiques/vgm-conv">vgm-conv</a></p>
+<a href="/upload.html">Upload a VGM file.</a>
 <?php
 function generateRandomString($length = 10) {
     $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
