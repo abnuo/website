@@ -12,3 +12,4 @@ function generateRandomString($length = 10) {
 $filename = generateRandomString();
 shell_exec("vgm-conv -f " . $_GET["f"] . " " . "-t " . $_GET["t"] . " -o $filename.vgm " . $_GET["i"]);
 ?>
+<?php echo("<a href=\"https://abnuosite.herokuapp.com/$filename.vgm\">Your file</a>"); ?>
