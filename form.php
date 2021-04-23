@@ -1,6 +1,6 @@
 <form action="/vgmconv.php">
   <label for="i">Convert VGM</label><br>
-  <input type="hidden" id="i" name="i" value="<?php echo basename( $_FILES["fileToUpload"]["name"]); ?>"><br>
+  <input type="hidden" id="i" name="i" value="<?php echo "temp/" . basename( $_FILES["fileToUpload"]["name"]); ?>"><br>
   <label for="lname">From:</label><br>
   <select name="f" id="f">
       <option value="ay8910">ay8910 (General Instrument AY-3-8910)</option>
