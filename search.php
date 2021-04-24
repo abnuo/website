@@ -20,7 +20,6 @@
       } else {
           $data = file_get_contents('https://www.google.com/search?q=' . $search);
       }
-      $data = file_get_contents('https://www.google.com/search?q=' . $search);
       $data = str_replace("/search", "/search.php", $data);
       $data = str_replace("/?sa", "/google.php?sa", $data);
       $data = str_replace("/url", "/url.php", $data);
