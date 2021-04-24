@@ -8,7 +8,8 @@ $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 
 // Check if file already exists
 if (file_exists($target_file)) {
-  echo "Sorry, file already exists.";
+  echo "Sorry, file already exists, You may be trying to reconvert this.";
+  include 'form.php';
   $uploadOk = 0;
 }
 
