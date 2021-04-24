@@ -15,12 +15,21 @@
   <body>
     <?php
     if ($mode == 'all') {
+      if (isset($_GET['start'])) {
+          $data = file_get_contents('https://www.google.com/search?q=' . $search . "&start=" . $_GET['start']);
+      } else {
+          $data = file_get_contents('https://www.google.com/search?q=' . $search);
+      }
       $data = file_get_contents('https://www.google.com/search?q=' . $search);
       $data = str_replace("/search", "/search.php", $data);
       $data = str_replace("/?sa", "/google.php?sa", $data);
       $data = str_replace("/url", "/url.php", $data);
     } elseif ($mode == 'img') {
-      $data = file_get_contents('https://www.google.com/search?q=' . $search . '&tbm=isch');
+      if (isset($_GET['start'])) {
+          $data = file_get_contents('https://www.google.com/search?q=' . $search . '&tbm=isch' . "&start=" . $_GET['start']);
+      } else {
+          $data = file_get_contents('https://www.google.com/search?q=' . $search . '&tbm=isch');
+      }
       $data = str_replace("/search", "/search.php", $data);
       $data = str_replace("/?sa", "/google.php?sa", $data);
       $data = str_replace("/url", "/url.php", $data);
