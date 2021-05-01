@@ -11,6 +11,6 @@ function generateRandomString($length = 10) {
     return $randomString;
 }
 $filename = generateRandomString();
-shell_exec("vgm-strip -c ym2203.ssg " . $_GET["f"] . " " . "> " . $_GET["t"]);
+shell_exec("vgm-strip -c ym2203.ssg " . $_GET["f"] . " " . "> " . $filename);
 ?>
 <?php echo("<a href=\"https://abnuosite.herokuapp.com/$filename.vgm\">Your file</a>"); ?>
