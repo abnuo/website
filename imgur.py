@@ -34,14 +34,13 @@ def genurls(byte, amount, urlsuffix):
     print('Not a valid URL suffix, using "_d"')
     urlsuffix = '_d'
   try:
-    for i in range(amount):
+    while True:
       randerps = rand(byte)
       url2 = urlformat.format(randerps,urlsuffix)
       r = requests.get(url2)
-      if hashlib.sha256(r.content).hexdigest() == removedhash:
-        failures += 1
-      else:
+      if hashlib.sha256(r.content).hexdigest() !== removedhash:
         imgururls.append(url2)
+        break
     return imgururls
   except Exception as e:
     print('Error.', str(e))
