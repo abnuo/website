@@ -38,7 +38,7 @@ def genurls(byte, amount, urlsuffix):
       randerps = rand(byte)
       url2 = urlformat.format(randerps,urlsuffix)
       r = requests.get(url2)
-      if hashlib.sha256(r.content).hexdigest() !== removedhash:
+      if hashlib.sha256(r.content).hexdigest() != removedhash:
         imgururls.append(url2)
         break
     return imgururls
