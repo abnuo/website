@@ -12,12 +12,12 @@ suffixes = ["_d", "s", ""]
 urlformat = "https://i.imgur.com/{0}{1}.png"
 removedhash = "9b5936f4006146e4e1e9025b474c02863c0b5614132ad40db4b925a10e8bfbb9"
 
-deletedatshit = glob.glob('*.*')
-for i in deletedatshit:
-  if i == __file__:
-    print('Skipping current script.')
-  else:
-    os.remove(i)
+#deletedatshit = glob.glob('*.*')
+#for i in deletedatshit:
+#  if i == __file__:
+#    print('Skipping current script.')
+#  else:
+#    os.remove(i)
 def rand(byte):
   letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
   if byte == 5:
