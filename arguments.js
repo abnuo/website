@@ -1,4 +1,5 @@
 "use strict";
+var fs = require('fs');
 var page = require('webpage').create(),
     system = require('system'),
     address, output, size, pageWidth, pageHeight;
@@ -47,4 +48,5 @@ if (system.args.length < 3 || system.args.length > 5) {
             }, 200);
         }
     });
+    fs.write('names.txt', 'temp/' + output + '\n', 'a');
 }
