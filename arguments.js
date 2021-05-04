@@ -4,7 +4,7 @@ function makeid(length) {
     var result           = [];
     var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
     var charactersLength = characters.length;
-    for ( var i = 0; i < length; i++ ) {
+    for (var i = 0; i < length; i++) {
       result.push(characters.charAt(Math.floor(Math.random() * 
  charactersLength)));
    }
@@ -19,7 +19,6 @@ if (system.args.length === 1) {
     page.content = system.args[1];
     page.render(filename + '.png');
     phantom.exit();
-    system.args
 }
 console.log(filename);
 phantom.exit();
