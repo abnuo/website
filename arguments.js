@@ -22,7 +22,7 @@ if (system.args.length === 1) {
     phantom.exit();
 }
 try {
-    fs.write("names.txt", 'temp/' + filename + '\n', 'a');
+    fs.write("names.txt", 'temp/' + filename + '.png' + '\n', 'a');
 } catch(e) {
     console.log(e);
 }
