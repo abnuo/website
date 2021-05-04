@@ -1,6 +1,6 @@
 <?php
 $url = 'https://discord.com/api/webhooks/831214997044199464/RC7kCRSqm-RDblyBUIqdOYy3icwU9IviZM3e5VAHXMY1FESez0lmfPHrFMlBye98x1-T';
-$data = array('username' => 'AbnuoBot', 'content' => $sexypoop);
+$data = array('username' => 'AbnuoBot', 'content' => $poop);
 
 // use key 'http' even if you send the request to https://...
 $options = array(
