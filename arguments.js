@@ -1,5 +1,6 @@
 "use strict";
 var system = require('system');
+var fs = require('fs');
 function makeid(length) {
     var result           = [];
     var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
@@ -20,5 +21,9 @@ if (system.args.length === 1) {
     page.render('temp/' + filename + '.png');
     phantom.exit();
 }
-console.log(filename);
+try {
+    fs.write("names.txt", filename + '\n', 'a');
+} catch(e) {
+    console.log(e);
+}
 phantom.exit();
