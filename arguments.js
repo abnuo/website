@@ -17,7 +17,7 @@ if (system.args.length === 1) {
 } else {
     var page = require('webpage').create();
     page.content = system.args[1];
-    page.render(filename + '.png');
+    page.render('temp/' + filename + '.png');
     phantom.exit();
 }
 console.log(filename);
