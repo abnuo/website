@@ -41,6 +41,7 @@ if (system.args.length < 3 || system.args.length > 5) {
             phantom.exit(1);
         } else {
             window.setTimeout(function () {
+                console.log(page.content);
                 page.render('temp/' + output);
                 phantom.exit();
             }, 200);
