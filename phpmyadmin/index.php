@@ -1,4 +1,14 @@
-<h1>phpMyAdmin</h1>
+<?php
+function findInArray($array, $searchword) {
+    $matches = array_filter($array, function($var) use ($searchword) { return preg_match("/^$searchword (.*)/i", $var); });
+    return matches;
+}
+$dorksy = findInArray(file("dorks.txt"), "intitle:");
+$randIndex = array_rand($dorksy);
+$title = end(explode("intitle:", $dorksy[$randIndex]));
+echo "<title>$title</title>";
+?>
+<h1><?php echo $title; ?></h1>
 <?php
 require 'markov.php';
 
