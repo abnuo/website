@@ -1,6 +1,6 @@
 <h1>phpMyAdmin</h1>
 
-<form>
+<form action="/comment.php" method="POST">
   <label for="comment">Please post your comments for the blog</label><br>
   <br>
   <textarea name="comment" id="comment" rows="4" columns="300"></textarea>
