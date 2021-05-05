@@ -8,5 +8,10 @@
   <input type="submit" name="submit" id="submit_comment" value="Submit">
 </form>
 <?php
-echo implode("\n<br>", file("../comments.txt"));
+function cleanus(&$value) {
+  $value = htmlspecialchars($value);
+}
+$comments = file("../comments.txt");
+array_walk_recursive($comments, 'cleanus');
+echo implode("\n<br>", $comments);
 ?>
