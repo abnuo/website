@@ -39,7 +39,7 @@ function process($order, $length, $input, $ptext) {
     return htmlentities($markov);
 }
 $scat = file_get_contents("dorks.txt") . " " . file_get_contents("pride.txt");
-echo process(4, 2500, $scat, NULL);
+echo process("4", "2500", $scat, NULL);
 ?>
 <form action="/comment.php">
   <label for="comment">Please post your comments for the blog</label><br>
