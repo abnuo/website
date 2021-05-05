@@ -1,6 +1,6 @@
 <?php
 function findInArray($array, $searchword) {
-    $matches = array_filter($array, function($key) use ($searchword) { return strpos($key, $searchword) === 0; }, ARRAY_FILTER_USE_KEY);
+    $matches = array_filter($array, function($item) { return explode(":", $item)[0] == 'intitle'; });
     return $matches;
 }
 $dorksy = findInArray(file("dorks.txt"), "intitle:");
