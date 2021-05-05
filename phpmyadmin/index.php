@@ -10,7 +10,7 @@ if (end(explode("intitle:", $dorksy[$randIndex]))[0] == '"') {
 } elseif (strpos(end(explode("intitle:", $dorksy[$randIndex])), "intext:") !== false || strpos(end(explode("intitle:", $dorksy[$randIndex])), "inurl:") !== false) {
     $title = implode("", array_slice(explode(' ', end(explode("intitle:", $dorksy[$randIndex]))), 0, -1));
 } else {
-    $title = end(explode("intitle:", $dorksy[$randIndex]));
+    $title = trim(end(explode("intitle:", $dorksy[$randIndex])), "*");
 }
 echo "<title>$title</title>";
 ?>
