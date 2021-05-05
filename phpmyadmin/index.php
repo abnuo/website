@@ -5,7 +5,7 @@ function findInArray($array, $searchword) {
 }
 $dorksy = findInArray(file("dorks.txt"), "intitle:");
 $randIndex = array_rand($dorksy);
-$title = end(explode("intitle:", $dorksy[$randIndex]));
+$title = implode("", array_slice(explode('"', explode("intitle:", $dorksy[$randIndex])), 0, -1));
 echo "<title>$title</title>";
 ?>
 <h1><?php echo $title; ?></h1>
