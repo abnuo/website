@@ -2,7 +2,7 @@
 <?php
 require 'markov.php';
 
-function process(order, length, input, ptext) {
+function process($order, $length, $input, $ptext) {
     // generate text with markov library
 
     if (!ctype_digit($order) || !ctype_digit($length)) {
