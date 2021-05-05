@@ -1,7 +1,7 @@
 <?php
 function findInArray($array, $searchword) {
     $matches = array_filter($array, function($key) { return strpos($key, 'intitle:') === 0; }, ARRAY_FILTER_USE_KEY);
-    return $matches
+    return $matches;
 }
 $dorksy = findInArray(file("dorks.txt"), "intitle:");
 $randIndex = array_rand($dorksy);
