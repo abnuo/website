@@ -5,7 +5,13 @@ function findInArray($array, $searchword) {
 }
 $dorksy = findInArray(file("dorks.txt"), "intitle:");
 $randIndex = array_rand($dorksy);
-$title = implode("", array_slice(explode('"', end(explode("intitle:", $dorksy[$randIndex]))), 0, -1));
+if (end(explode("intitle:", $dorksy[$randIndex]))[0] == '"') {
+    $title = implode("", array_slice(explode('"', end(explode("intitle:", $dorksy[$randIndex]))), 0, -1));
+} elseif (strpos(end(explode("intitle:", $dorksy[$randIndex])), "intext:") !== false || strpos(end(explode("intitle:", $dorksy[$randIndex])), "inurl:") !== false) {
+    $title = implode("", array_slice(explode(' ', end(explode("intitle:", $dorksy[$randIndex]))), 0, -1));
+} else {
+    $title = end(explode("intitle:", $dorksy[$randIndex]));
+}
 echo "<title>$title</title>";
 ?>
 <h1><?php echo $title; ?></h1>
