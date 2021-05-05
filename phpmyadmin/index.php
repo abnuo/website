@@ -8,7 +8,7 @@
   <input type="submit" name="submit" id="submit_comment" value="Submit">
 </form>
 <?php
-foreach(file("comments.txt") as $line) {
+foreach(file("../comments.txt") as $line) {
     echo htmlspecialchars($line) . "\n<br>";
 }
 ?>
