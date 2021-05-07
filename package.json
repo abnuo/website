@@ -15,7 +15,9 @@
     "vgm-conv": "^0.7.0",
     "vgm-strip": "^0.1.3",
     "tracery-grammar": "^2.7.4",
-    "nsfwjs": "^2.4.0"
+    "nsfwjs": "^2.4.0",
+    "tensorflow": "^0.7.0",
+    "@tensorflow/tfjs-node": "^3.6.1"
   },
   "engines": {
     "node": "12.x"
