@@ -1,2 +1,1 @@
-worker: echo "Before restarting of apache"
-web: heroku-php-apache2
+web: echo "Before restarting of apache" && heroku-php-apache2
