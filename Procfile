@@ -1,2 +1,2 @@
+worker: echo "Before restarting of apache"
 web: heroku-php-apache2
-worker: cp /curly/butt.html /app/butt.html
