@@ -1,1 +1,1 @@
-echo "Yeet"
+wget -O scat.html "https://google.com"
