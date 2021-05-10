@@ -1,2 +1,2 @@
-release: ls && ./penis.sh
+release: bash penis.sh
 web: heroku-php-apache2
