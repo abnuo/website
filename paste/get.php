@@ -17,11 +17,8 @@ function analVore($array) {
     return $matches;
 }
 // Printing results in HTML
-$arrayd = pg_fetch_array($result, null, PGSQL_BOTH);
-$blorpusYeeter = array_map('fatCat', $arrayd);
-$ids = $arrayd['penis'];
-$contents = $arrayd['contents'];
-$idpos = analVore($blorpusYeeter)[0];
+$arrayd = explode("\n", file_get_contents("http://localhost/paste/view.php"));
+$idpos = array_search($id,$arrayd,true);
 $contentpos = $idpos + 1;
 if (strpos(trim($arrayd[$contentpos], '*'), '"') === 0) {
     $content = trim(trim($arrayd[$contentpos], '*'), '*');
