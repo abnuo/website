@@ -1,6 +1,6 @@
 <?php
 $conn = pg_connect(getenv("DATABASE_URL"));
-$query = 'CREATE TABLE pastes ()';
+$query = "ALTER TABLE pastes\nADD COLUMN pastes TEXT [];";
 $result = pg_query($query) or die('Query failed: ' . pg_last_error());
 
 // Printing results in HTML
