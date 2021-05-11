@@ -15,7 +15,7 @@ function analVore($array) {
     return $matches;
 }
 // Printing results in HTML
-$arrayd = explode("\n", getTheScat());
+$arrayd = explode("\n", implode("", getTheScat()));
 $idpos = array_search($id,$arrayd,true);
 $contentpos = $idpos + 1;
 if (strpos(trim($arrayd[$contentpos], '*'), '"') === 0) {
