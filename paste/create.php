@@ -15,7 +15,7 @@ $query = "INSERT INTO pastes\n    VALUES (ARRAY['$id'], ARRAY['$content']);";
 $result = pg_query($query) or die('Query failed: ' . pg_last_error());
 
 // Printing results in HTML
-echo "<p>URL:</p><textarea rows=\"1\" cols=\"0\">https://" . $_SERVER['HTTP_HOST'] . "/paste/get.php?id=$id</textarea>";
+echo "<p>URL:</p><textarea rows=\"2\" cols=\"30\">https://" . $_SERVER['HTTP_HOST'] . "/paste/get.php?id=$id</textarea>";
 
 // Free resultset
 pg_free_result($result);
