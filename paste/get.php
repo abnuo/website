@@ -6,8 +6,8 @@ $result = pg_query($query) or die('Query failed: ' . pg_last_error());
 
 // Printing results in HTML
 $arrayd = pg_fetch_array($result, null, PGSQL_BOTH);
-$ids = $arrayd['id']
-$contents = $arrayd['contents']
+$ids = $arrayd['id'];
+$contents = $arrayd['contents'];
 $idpos = array_search($id,$ids,true);
 $contentpos = $idpos + 1;
 if (strpos(trim($contents[$idpos], '*'), '"') === 0) {
