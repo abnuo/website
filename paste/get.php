@@ -18,10 +18,10 @@ function analVore($array) {
 $arrayd = explode("\n", implode("", getTheScat()));
 $idpos = array_search($id,$arrayd);
 $contentpos = $idpos + 1;
-if ($arrayd[$contentpos][1] == '"') {
-    $content = trim(trim($arrayd[$contentpos], '*'), '*');
+if (stripslashes(substr($arrayd[$contentpos], 1, -1))[0] == '"') {
+    $content = trim(stripslashes(substr($arrayd[$contentpos], 1, -1)), '"');
 } else {
-    $content = trim($arrayd[$contentpos], '*');
+    $content = stripslashes(substr($arrayd[$contentpos], 1, -1));
 }
 
 echo "<h1>$idpos:$id</h1>\n<textarea readonly rows=\"30\" cols=\"60\">$content</textarea>";
