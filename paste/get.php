@@ -37,5 +37,5 @@ echo "<h1>$test:$ids:$contents:$idpos</h1>\n<textarea readonly rows=\"30\" cols=
 pg_free_result($result);
 
 // Closing connection
-pg_close($dbconn);
+pg_close($conn);
 ?>
