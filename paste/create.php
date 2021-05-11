@@ -9,9 +9,9 @@ function generateRandomString($length) {
     return $randomString;
 }
 $id = generateRandomString(5);
-$content = pg_escape_literal($_POST["content"]);
+$content = pg_escape_string($_POST["content"]);
 $conn = pg_connect(getenv("DATABASE_URL"));
-$query = "INSERT INTO pastes\n    VALUES (ARRAY['$id'], ARRAY[$content]);";
+$query = "INSERT INTO pastes\n    VALUES (ARRAY['$id'], ARRAY['$content']);";
 $result = pg_query($query) or die('Query failed: ' . pg_last_error());
 
 // Printing results in HTML
