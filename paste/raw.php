@@ -20,9 +20,9 @@ $arrayd = explode("\n", implode("", getTheScat()));
 $idpos = array_search($id,$arrayd);
 $contentpos = $idpos + 1;
 if (stripslashes(substr($arrayd[$contentpos], 1, -1))[0] == '"') {
-    $content = trim(stripslashes(substr($arrayd[$contentpos], 1, -1)), '"');
+    $content = str_replace("\\n","\n",trim(stripslashes(substr($arrayd[$contentpos], 1, -1)), '"'));
 } else {
-    $content = stripslashes(substr($arrayd[$contentpos], 1, -1));
+    $content = str_replace("\\n","\n",stripslashes(substr($arrayd[$contentpos], 1, -1)));
 }
 
 echo "$content";
