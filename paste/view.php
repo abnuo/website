@@ -1,5 +1,6 @@
 <?php
 function getTheScat() {
+    $cuckFamily = array();
     $conn = pg_connect(getenv("DATABASE_URL"));
     $query = "SELECT * from pastes;";
     $result = pg_query($query) or die('Query failed: ' . pg_last_error());
@@ -7,7 +8,7 @@ function getTheScat() {
     // Printing results
     while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
         foreach ($line as $col_value) {
-            echo "$col_value\n";
+            array_push($cuckFamily, "$col_value\n");
         }
     }
 
@@ -16,5 +17,6 @@ function getTheScat() {
 
     // Closing connection
     pg_close($conn);
+    return $cuckFamily
 }
 ?>
