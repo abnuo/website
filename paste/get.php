@@ -1,7 +1,7 @@
 <?php
 require 'view.php';
 
-$id = $_GET['id'];
+$id = '{' . $_GET['id'] . '}';
 function fatCat($n) {
     return var_export($n, true);
 }
