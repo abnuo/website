@@ -18,5 +18,5 @@ function getTheScat() {
     // Closing connection
     pg_close($conn);
     return $cuckFamily
-}
+};
 ?>
