@@ -1,4 +1,6 @@
 <?php
+header('Content-Type: text/plain');
+
 function generateRandomString($length) {
     $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
     $charactersLength = strlen($characters);
@@ -14,16 +16,13 @@ $conn = pg_connect(getenv("DATABASE_URL"));
 $query = "SELECT * from pastes;";
 $result = pg_query($query) or die('Query failed: ' . pg_last_error());
 
-// Printing results in HTML
-echo "<table>\n";
+// Printing results
 while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
     echo "\t<tr>\n";
     foreach ($line as $col_value) {
-        echo "\t\t<td>$col_value</td>\n";
+        echo "$col_value\n";
     }
-    echo "\t</tr>\n";
 }
-echo "</table>\n";
 
 // Free resultset
 pg_free_result($result);
