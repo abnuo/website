@@ -6,7 +6,7 @@ $result = pg_query($query) or die('Query failed: ' . pg_last_error());
 
 // Printing results in HTML
 $arrayd = pg_fetch_array($result, null, PGSQL_BOTH);
-$ids = $arrayd['id'];
+$ids = $arrayd['penis'];
 $contents = $arrayd['contents'];
 $idpos = array_search($id,$ids,true);
 $contentpos = $idpos + 1;
