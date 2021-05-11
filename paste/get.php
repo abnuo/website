@@ -26,4 +26,4 @@ if (stripslashes(substr($arrayd[$contentpos], 1, -1))[0] == '"') {
 
 echo "<h1>$idpos:$id</h1>\n<textarea readonly rows=\"13\" cols=\"60\">" . htmlspecialchars($content) . "</textarea><br>";
 ?>
-<a href="/paste/raw.php?id=<?php echo $id; ?>">Raw</a><a href="/paste/">Create paste</a>
+<a href="/paste/raw.php?id=<?php echo $_GET['id']; ?>">Raw</a><a href="/paste/">Create paste</a>
