@@ -4,6 +4,7 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 $id = $_GET['id'];
 $conn = pg_connect(getenv("DATABASE_URL"));
+echo "Heloe";
 $query = "SELECT * from pastes WHERE id='" . $id . "';";
 $result = pg_query($query) or die('Query failed: ' . pg_last_error());
 $arrayd = pg_fetch_array($result, null, PGSQL_ASSOC);
