@@ -1,4 +1,5 @@
 <?php
+$id = $_GET['id'];
 function fatCat($n) {
     return var_export($n, true);
 }
