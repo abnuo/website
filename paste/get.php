@@ -29,7 +29,7 @@ if (strpos(trim($arrayd[$contentpos], '*'), '"') === 0) {
     $content = trim($arrayd[$contentpos], '*');
 }
 
-echo "<h1>$test:$ids:$contents</h1>\n<textarea readonly rows=\"30\" cols=\"60\">$content</textarea>";
+echo "<h1>$test:$ids:$contents:$idpos</h1>\n<textarea readonly rows=\"30\" cols=\"60\">$content</textarea>";
 
 
 
