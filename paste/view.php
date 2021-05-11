@@ -18,7 +18,6 @@ $result = pg_query($query) or die('Query failed: ' . pg_last_error());
 
 // Printing results
 while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
-    echo "\t<tr>\n";
     foreach ($line as $col_value) {
         echo "$col_value\n";
     }
