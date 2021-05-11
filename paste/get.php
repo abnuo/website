@@ -10,13 +10,13 @@ $ids = $arrayd['penis'];
 $contents = $arrayd['contents'];
 $idpos = array_search($id,$ids,true);
 $contentpos = $idpos + 1;
-if (strpos(trim($contents[$idpos], '*'), '"') === 0) {
-    $content = trim(trim($contents[$idpos], '*'), '*');
+if (strpos(trim($arrayd[$contentpos], '*'), '"') === 0) {
+    $content = trim(trim($arrayd[$contentpos], '*'), '*');
 } else {
-    $content = trim($contents[$idpos], '*');
+    $content = trim($arrayd[$contentpos], '*');
 }
 
-echo "<h1>$test</h1>\n<textarea readonly rows=\"30\" cols=\"60\">$content</textarea>";
+echo "<h1>$test:$ids:$contents</h1>\n<textarea readonly rows=\"30\" cols=\"60\">$content</textarea>";
 
 
 
