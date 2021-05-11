@@ -24,5 +24,5 @@ if (stripslashes(substr($arrayd[$contentpos], 1, -1))[0] == '"') {
     $content = stripslashes(substr($arrayd[$contentpos], 1, -1));
 }
 
-echo "<h1>$idpos:$id</h1>\n<textarea readonly rows=\"30\" cols=\"60\">$content</textarea>";
+echo "<h1>$idpos:$id</h1>\n<textarea readonly rows=\"13\" cols=\"60\">$content</textarea>";
 ?>
