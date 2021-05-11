@@ -1,7 +1,7 @@
 <?php
 $id = $_GET['id'];
 $conn = pg_connect(getenv("DATABASE_URL"));
-$query = "SELECT * from pastes WHERE id=" . $id . ";";
+$query = "SELECT * from pastes WHERE id='" . $id . "';";
 $result = pg_query($query) or die('Query failed: ' . pg_last_error());
 $arrayd = pg_fetch_array($result, null, PGSQL_ASSOC);
 $idpos = array_search($id,$arr,true);
