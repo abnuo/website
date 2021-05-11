@@ -1,6 +1,6 @@
 <?php
 $conn = pg_connect(getenv("DATABASE_URL"));
-$query = "ALTER TABLE pastes\nADD COLUMN penis TEXT [];";
+$query = "ALTER TABLE pastes\nADD COLUMN contents TEXT [];";
 $result = pg_query($query) or die('Query failed: ' . pg_last_error());
 
 // Printing results in HTML
