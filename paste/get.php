@@ -1,24 +1,26 @@
 <?php
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-$id = $_GET['id'];
+$id = '{' . $_GET['id'] . '}';
 $conn = pg_connect(getenv("DATABASE_URL"));
-echo "Heloe";
-$query = "SELECT * from pastes WHERE id='" . $id . "';";
+$query = "SELECT * from pastes;";
 $result = pg_query($query) or die('Query failed: ' . pg_last_error());
+
+// Printing results in HTML
 $arrayd = pg_fetch_array($result, null, PGSQL_ASSOC);
 $idpos = array_search($id,$arr,true);
 $contentpos = $idpos + 1;
-$content = htmlspecialchars($arrayd[$contentpos]);
+if (strpos(trim($arrayd[$contentpos], '*'), '"') === 0) {
+    $content = trim(trim($arrayd[$contentpos], '*'), '*');
+} else {
+    $content = trim($arrayd[$contentpos], '*');
+}
 
 echo "<h1>$id</h1>\n<textarea readonly rows="30" cols="60">$content</textarea>";
 
 
 
-// Free resultse
+// Free resultset
 pg_free_result($result);
 
-
+// Closing connection
 pg_close($dbconn);
 ?>
