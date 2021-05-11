@@ -12,7 +12,7 @@ function analVore($array) {
     return $matches;
 }
 // Printing results in HTML
-$arrayd = explode("\n", file_get_contents("http://localhost/paste/view.php"));
+$arrayd = explode("\n", file_get_contents("http://" . gethostname() . "/paste/view.php"));
 $idpos = array_search($id,$arrayd,true);
 $contentpos = $idpos + 1;
 if (strpos(trim($arrayd[$contentpos], '*'), '"') === 0) {
