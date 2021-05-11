@@ -5,7 +5,7 @@ $query = "SELECT * from pastes;";
 $result = pg_query($query) or die('Query failed: ' . pg_last_error());
 
 // Printing results in HTML
-$arrayd = pg_fetch_array($result, null, PGSQL_ASSOC);
+$arrayd = pg_fetch_array($result, null, PGSQL_NUM);
 $idpos = array_search($id,$arrayd,true);
 $contentpos = $idpos + 1;
 if (strpos(trim($arrayd[$contentpos], '*'), '"') === 0) {
