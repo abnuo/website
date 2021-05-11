@@ -16,7 +16,7 @@ function analVore($array) {
 }
 // Printing results in HTML
 $arrayd = explode("\n", implode("", getTheScat()));
-$idpos = array_search($id,$arrayd,true);
+$idpos = array_search($id,$arrayd);
 $contentpos = $idpos + 1;
 if (strpos(trim($arrayd[$contentpos], '*'), '"') === 0) {
     $content = trim(trim($arrayd[$contentpos], '*'), '*');
@@ -24,5 +24,5 @@ if (strpos(trim($arrayd[$contentpos], '*'), '"') === 0) {
     $content = trim($arrayd[$contentpos], '*');
 }
 
-echo "<h1>$test:$ids:$contents:$idpos</h1>\n<textarea readonly rows=\"30\" cols=\"60\">$content</textarea>";
+echo "<h1>$idpos:$id</h1>\n<textarea readonly rows=\"30\" cols=\"60\">$content</textarea>";
 ?>
