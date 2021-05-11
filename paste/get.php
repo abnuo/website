@@ -18,7 +18,7 @@ function analVore($array) {
 $arrayd = explode("\n", implode("", getTheScat()));
 $idpos = array_search($id,$arrayd);
 $contentpos = $idpos + 1;
-if (strpos(trim($arrayd[$contentpos], '*'), '"') === 0) {
+if ($arrayd[$contentpos][1] == '"') {
     $content = trim(trim($arrayd[$contentpos], '*'), '*');
 } else {
     $content = trim($arrayd[$contentpos], '*');
