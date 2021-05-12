@@ -18,7 +18,8 @@
     "nsfwjs": "^2.4.0",
     "@tensorflow/tfjs-node": "^3.6.1",
     "axios": "^0.21.1",
-    "@malvineous/opl": "^1.0.0"
+    "@malvineous/opl": "^1.0.0",
+    "node-wav": "^0.0.2"
   },
   "engines": {
     "node": "12.x"
