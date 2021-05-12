@@ -1,3 +1,3 @@
 <?php
-echo shell_exec("node opltest.js");
+echo shell_exec("python opl.py");
 ?>
