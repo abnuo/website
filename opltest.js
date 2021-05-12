@@ -5,17 +5,7 @@ const crypto = require('crypto');
 const size =  5000
 const amplitude = 128
 const sampleRate = 20
-crypto.randomBytes(127, (err, buf) => { 
-
-  if (err) { 
-
-    // Prints error 
-
-    console.log(err); 
-
-    return; 
-
-  } 
+const buf = crypto.randomBytes(512);
 OPL.create().then(opl => {
     opl.write(buf);
     const samples = opl.generate(512);
