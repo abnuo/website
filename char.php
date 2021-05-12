@@ -7,6 +7,6 @@ function uniord($u) {
 }
 $chars = str_split($_GET['s']);
 foreach ($chars as $char) {
-    echo uniord($char)(
+    echo uniord($char);
 }
 ?>
