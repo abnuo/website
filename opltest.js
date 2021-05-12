@@ -12,5 +12,5 @@ OPL.create().then(opl => {
     let wav = new wavefile.WaveFile();
     // Create a mono wave file, 44.1 kHz, 32-bit and 4 samples
     wav.fromScratch(1, 44100, '16', samples);
-    fs.writeFileSync(path, wav.toBuffer());
+    fs.writeFileSync('opl.wav', wav.toBuffer());
 });
