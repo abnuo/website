@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<script src="https://rawgit.com/zholos/js_bitmap/master/bitmap.js"></script>
+<script>
+var bmp = new Bitmap(w, h);
+bmp.pixel[x][y] = [r, g, b, a];
+bmp.subsample(n);
+var url = bmp.dataURL();
+window.location.replace(url);
+</script>
+</body>
+</html>
