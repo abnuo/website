@@ -7,14 +7,14 @@
     <script type="text/javascript" src="/eel.js"></script>
     <script type="text/javascript">
       function discord_js(x) {
-        eel.discord(document.getElementById("myTextarea").value);
+        eel.discord(document.getElementById("content").value);
       }
     </script>
   </head>
 
   <body>
     Hello, World!
-    <textarea rows="0" cols="0"></textarea>
+    <textarea id="content" rows="0" cols="0"></textarea>
     <button onclick="discord_js()">Send</button>
   </body>
 </html>
