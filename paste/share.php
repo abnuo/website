@@ -1,4 +1,3 @@
-
 <?php
 require 'view.php';
 
@@ -25,6 +24,6 @@ if (stripslashes(substr($arrayd[$contentpos], 1, -1))[0] == '"') {
     $content = str_replace("\\n","\n",stripslashes(substr($arrayd[$contentpos], 1, -1)));
 }
 
-url = file_get_contents('http://tinyurl.com/api-create.php?url='.'data:text/plain;base64,' . base64_encode($content));
+$url = file_get_contents('http://tinyurl.com/api-create.php?url='.'data:text/plain;base64,' . base64_encode($content));
 echo "<textarea readonly rows="0" cols="0">" . htmlspecialchars($url) . "</textarea>";
 ?>
