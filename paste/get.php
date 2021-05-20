@@ -27,3 +27,7 @@ if (stripslashes(substr($arrayd[$contentpos], 1, -1))[0] == '"') {
 echo "<h1>$idpos:$id</h1>\n<textarea readonly rows=\"13\" cols=\"60\">" . htmlspecialchars($content) . "</textarea><br>";
 ?>
 <a href="/paste/raw.php?id=<?php echo $_GET['id']; ?>">Raw</a><a href="/paste/">Create paste</a><a href="data:text/plain;base64,<?php echo base64_encode(htmlspecialchars($content)); ?>">Data URI</a><br><p>For iOS devices:</p><textarea readonly rows="0" cols="0">data:text/plain;base64,<?php echo base64_encode(htmlspecialchars($content)); ?></textarea>
+<form action="/paste/share.php">
+ <input type="hidden" id="id" name="id" value="<?php echo $_GET["id"]; ?>">
+ <input type="submit" value="Share">
+</form>
