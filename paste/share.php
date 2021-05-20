@@ -26,6 +26,5 @@ if (stripslashes(substr($arrayd[$contentpos], 1, -1))[0] == '"') {
 }
 
 url = file_get_contents('http://tinyurl.com/api-create.php?url='.'data:text/plain;base64,' . base64_encode($content));
-echo "<h1>$idpos:$id</h1>\n<textarea readonly rows=\"13\" cols=\"60\">" . htmlspecialchars($content) . "</textarea><br>";
+echo "<textarea readonly rows="0" cols="0">" . htmlspecialchars($url) . "</textarea>";
 ?>
-<a href="/paste/raw.php?id=<?php echo $_GET['id']; ?>">Raw</a><a href="/paste/">Create paste</a><a href="data:text/plain;base64,<?php echo base64_encode(htmlspecialchars($content)); ?>">Data URI</a><br><p>For iOS devices:</p><textarea readonly rows="0" cols="0">data:text/plain;base64,<?php echo base64_encode(htmlspecialchars($content)); ?></textarea>
