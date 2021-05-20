@@ -24,7 +24,7 @@ if (stripslashes(substr($arrayd[$contentpos], 1, -1))[0] == '"') {
     $content = str_replace("\\n","\n",stripslashes(substr($arrayd[$contentpos], 1, -1)));
 }
 
-$html = "<h1>$idpos:$id</h1>\n<textarea readonly rows=\"13\" cols=\"60\">" . htmlspecialchars($content) . "</textarea><br>\n<p>Made with <a href=\"https://" . $_SERVER["HTTP_HOST"] . "/paste/\">Paste</a>";
+$html = "<h1>$id - MiniPastes</h1>\n<textarea readonly rows=\"13\" cols=\"60\">" . htmlspecialchars($content) . "</textarea><br>\n<p>Made with <a href=\"https://" . $_SERVER["HTTP_HOST"] . "/paste/\">Paste</a>";
 $url = file_get_contents('http://tinyurl.com/api-create.php?url='.'data:text/html,' . urlencode($html));
 echo "<textarea readonly rows=\"0\" cols=\"0\">" . htmlspecialchars($url) . "</textarea>";
 ?>
