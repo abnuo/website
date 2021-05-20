@@ -25,5 +25,5 @@ if (stripslashes(substr($arrayd[$contentpos], 1, -1))[0] == '"') {
 }
 
 $url = file_get_contents('http://tinyurl.com/api-create.php?url='.'data:text/plain;base64,' . base64_encode($content));
-echo "<textarea readonly rows="0" cols="0">" . htmlspecialchars($url) . "</textarea>";
+echo "<textarea readonly rows=\"0\" cols=\"0\">" . htmlspecialchars($url) . "</textarea>";
 ?>
