@@ -23,3 +23,18 @@
   </select><br><br>
   <input type="submit" value="Submit">
 </form>
+<form action="/scope.php">
+  <label for="i">Corrscope Web</label><br>
+  <input type="hidden" id="i" name="i" value="<?php echo "temp/" . basename( $_FILES["fileToUpload"]["name"]); ?>"><br>
+  <label for="s">From:</label><br>
+  <select name="s" id="s">
+<?php
+$files = scandir("temp");
+foreach ($arr as $i) {
+    echo "      <option value=\"temp/$i\">$i</option>";
+}
+?>
+  </select><br><br>
+  <input type="text" id="m" name="m"><br><br>
+  <input type="submit" value="Submit">
+</form>
