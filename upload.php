@@ -20,7 +20,7 @@ if ($_FILES["fileToUpload"]["size"] > 5555000) {
 }
 
 // Allow certain file formats
-if($imageFileType != "exe") {
+if($imageFileType == "exe") {
   echo "Sorry, only files are allowed.";
   $uploadOk = 0;
 }
