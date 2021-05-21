@@ -7,19 +7,8 @@
     "start": "node server.js"
   },
   "dependencies": {
-    "fastify": "^3.14.1",
-    "fastify-formbody": "^5.0.0",
-    "fastify-static": "^4.0.0",
-    "handlebars": "^4.7.7",
-    "point-of-view": "^4.14.0",
     "vgm-conv": "^0.7.0",
     "vgm-strip": "^0.1.3",
-    "tracery-grammar": "^2.7.4",
-    "nsfwjs": "^2.4.0",
-    "@tensorflow/tfjs-node": "^3.6.1",
-    "axios": "^0.21.1",
-    "@malvineous/opl": "^1.0.0",
-    "wavefile": "^11.0.0"
   },
   "engines": {
     "node": "12.x"
