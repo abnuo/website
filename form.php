@@ -30,7 +30,7 @@
   <select name="s" id="s">
 <?php
 $files = scandir("temp");
-foreach ($arr as $i) {
+foreach ($files as $i) {
     echo "      <option value=\"temp/$i\">$i</option>";
 }
 ?>
