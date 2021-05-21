@@ -20,8 +20,8 @@ if ($_FILES["fileToUpload"]["size"] > 5555000) {
 }
 
 // Allow certain file formats
-if($imageFileType != "vgm") {
-  echo "Sorry, only VGM files are allowed.";
+if($imageFileType != "vgm" || $imageFileType != "wav" || $imageFileType != "mp3") {
+  echo "Sorry, only VGM, WAV or MP3 files are allowed.";
   $uploadOk = 0;
 }
 
