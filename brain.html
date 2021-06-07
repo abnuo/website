@@ -1,0 +1,26 @@
+<script src="//unpkg.com/brain.js"></script>
+<script>
+const trainingData = [
+  'Burpo saw Scat.',
+  'Scat saw Burpo.',
+  'Ena saw Burpo and Scat looking at each other.',
+  'It was derps at first poggus, and Ena had a frontrow seat. It was a very special moment for all.'
+];
+
+const lstm = new brain.recurrent.LSTM();
+const result = lstm.train(trainingData, {
+  iterations: 1500,
+  log: details => console.log(details),
+  errorThresh: 0.011
+});
+
+const run1 = lstm.run('Jane');
+const run2 = lstm.run('Doug');
+const run3 = lstm.run('Spot');
+const run4 = lstm.run('It');
+
+document.write('run 1: Jane' + run1);
+document.write('run 2: Doug' + run2);
+document.write('run 3: Spot' + run3);
+document.write('run 4: It' + run4);
+</script>
