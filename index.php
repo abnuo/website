@@ -19,7 +19,7 @@ echo "<p>CONGRATS! You are lucky today.. You have won a $word $word2! Clicky cli
 ?>
 <p>Look at this nsf player it is seexy</p>
 <script src="libgme/libgme.js"></script>
-<script src="index.js></script>
+<script src="index.js"></script>
 <script>
 const nsfPlayer = createNsfPlayer(); // An audio context is created for you.
 nsfPlayer.play('/nsf/smurf.nsf', 2);
