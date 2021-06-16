@@ -16,7 +16,7 @@ jobs:
     - uses: actions/create-release@v1
     - env:
         WINTOKENY: ${{ secrets.WINTOKENY }}
-    - name: make all
+    - name: make alla
       run: make all
     
     - uses: actions/upload-release-asset@v1.0.1
