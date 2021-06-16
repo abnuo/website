@@ -9,6 +9,6 @@ function generateRandomString($length) {
     return $randomString;
 }
 $fn = generateRandomString(5);
-shell_exec("ffmpeg -i " . $_GET["i"] . " " . $fn . ".mp3");
-echo "<a href=\"$fn\">Your file</a>";
+shell_exec("./devox -b 16 " . $_GET["i"] . " " . $fn . ".wav");
+echo "<a href=\"$fn.wav\">Your file</a>";
 ?>
