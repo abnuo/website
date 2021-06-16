@@ -13,19 +13,23 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    - uses: actions/create-release@v1
+    - env:
+        WINTOKENY: ${{ secrets.WINTOKENY }}
     - name: make all
       run: make all
-     - uses: actions/upload-release-asset@v1.0.1
-      env:
-        GITHUB_TOKEN: ${{ secrets.WINTOKENY }}
-      with:
-        upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: ./devox
-        asset_name: devox
-        asset_content_type: application/octet-stream
+    
+    - uses: actions/upload-release-asset@v1.0.1
+     env:
+       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+     with:
+       upload_url: ${{ steps.create_release.outputs.upload_url }}
+       asset_path: ./devox
+       asset_name: devox
+       asset_content_type: application/octet-stream
 
     - uses: eregon/publish-release@v1
       env:
-        GITHUB_TOKEN: ${{ secrets.WINTOKENY }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         release_id: ${{ steps.create_release.outputs.id }}
