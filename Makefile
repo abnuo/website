@@ -4,13 +4,10 @@ CC=gcc
 CFLAGS=
 INSTALLDIR=/usr/local
 
-all: devox vox
+all: devox
 
 install: all
-	cp vox $(INSTALLDIR)/bin	
-	cp devox $(INSTALLDIR)/bin	
-	cp vox.1 $(INSTALLDIR)/man/man1
-	ln -s $(INSTALLDIR)/man/man1/vox.1 $(INSTALLDIR)/man/man1/devox.1
+	cp vox $(INSTALLDIR)/bin
 
 devox: ${DOBJ}
 	$(CC) -o $@ ${DOBJ}
