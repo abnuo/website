@@ -6,6 +6,9 @@
 body {
   background-image: url('CuteAndFannyInflation.jpeg');
 }
+p {
+  color: blue;
+}
 </style>
 </head>
 <body>
