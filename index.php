@@ -7,7 +7,7 @@ body {
   background-image: url('CuteAndFannyInflation.jpeg');
 }
 p {
-  color: blue;
+  color: red;
 }
 </style>
 </head>
@@ -33,6 +33,7 @@ echo "<p>CONGRATS! You are lucky today.. You have won a $word $word2! Clicky cli
 const nsfPlayer = createNsfPlayer(); // An audio context is created for you.
 nsfPlayer.play('/nsf/smurf.nsf', 2);
 </script>
-<?php require('ip.php'); ?>
+<hr>
+<p>Bruh, BruhBruh bruh 😎 bruh</p>
 </body>
 </html>
