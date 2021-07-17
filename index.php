@@ -1,10 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
+<title>2021 WebVisit</title>
+<style>
+body {
+  background-image: url('CuteAndFannyInflation.jpeg');
+}
+</style>
 </head>
 <body>
-<h1>The WebSite Of An Abnuos</h1>
-<a href="/google.php">My google proxy</a> <a href="https://dazzling-voice-19912.pktriot.net">My other site (may be down; for stuff that requires a non-ephemeral filesystem/etc)</a> <a href="https://raproxy.herokuapp.com/">Womginx reverse proxy</a> <a href="/imgur.php">Random images from imgur (Try not to hammer it, it makes the dyno run slower)</a>
+<h1>Website, explore eyes 👀</h1>
+<a href="/google.php">ProxyDeGoogle</a> <a href="https://sexy-voice-19912.pktriot.net">My otWOAJQ A Z WI AN A(ma a  fi/e)</a> <a href="https://Poopy.herokuapp.com/"> Poop Emoji</a> <a href="/imgur2.php">Imgur Sexay</a>
 <?php
 $poop = array("Free", "XXX", "Porn", "Rule34", "Tits", "Ass", "3gp", "video");
 shuffle($poop);
@@ -14,10 +20,10 @@ echo "<p>$penis</p>";
 <?php
 $word = explode('"]', explode('["', file_get_contents("https://random-word-api.herokuapp.com/word"))[1])[0];
 $word2 = explode('"]', explode('["', file_get_contents("https://random-word-api.herokuapp.com/word"))[1])[0];
-$domain = "http://$word-$word2.com/";
+$domain = "http://$word.com/";
 echo "<p>CONGRATS! You are lucky today.. You have won a $word $word2! Clicky click! <a href=\"$domain\">Your surprise!</a></p>";
 ?>
-<p>Look at this nsf player it is seexy</p>
+<p>Look at this nsf player dos it work or No</p>
 <script src="libgme/libgme.js"></script>
 <script src="index.js"></script>
 <script>
