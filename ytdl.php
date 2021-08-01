@@ -10,6 +10,6 @@ function genStr($length = 10) {
 }
 
 $filename = genStr(5) . '.mp4';
-shell_exec("yt-dlp --output dl/$filename https://youtu.be/" . $_GET["id"] . ");
+shell_exec("yt-dlp --output dl/$filename https://youtu.be/" . $_GET["id"]);
 echo("<a href=\"https://abnuosite.herokuapp.com/dl/$filename.np4\">Your file</a>");
 ?>
