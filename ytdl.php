@@ -9,7 +9,7 @@ function genStr($length = 10) {
     return $randomString;
 }
 
-$filename = genStr(5);
+$filename = genStr(5) . '.mp4';
 shell_exec("yt-dlp --output dl/$filename https://youtu.be/" . $_GET["id"] . ");
-echo '<a href="dl/' . $filename . '">Your file</a>';
+echo("<a href=\"https://abnuosite.herokuapp.com/dl/$filename.np4\">Your file</a>");
 ?>
