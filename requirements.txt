@@ -1,5 +1,6 @@
 requests
 bs4
+yt-dlp
 psycopg2
 corrscope
 git+https://github.com/TexZK/oply.git
