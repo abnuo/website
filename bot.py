@@ -1,5 +1,5 @@
 from mastodon import Mastodon
-import{} random
+import random
 import requests
 import time
 import os
