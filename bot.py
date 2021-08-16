@@ -81,5 +81,5 @@ def tootify2(fart, media, mime):
         except Exception as e:
             print('FartError: ' + str(e))
 
-tootuz(random.randint(0, 6))
+tootuz(random.randint(0, 7))
 #tootuz(2)
