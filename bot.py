@@ -89,11 +89,13 @@ def tootuz(num):
       penis = json.loads(r.text)
       tootify2('A wise man once said this... ' + penis['quote'], None, None)
   if num == 7:
+      print('Tooting -> Noise video')
       os.system('ffmpeg -y -f rawvideo -video_size 100x100 -pixel_format yuv420p -framerate 25 -i /dev/urandom -ar 48000 -ac 2 -f s16le -i /dev/urandom -t 5 output.mp4')
       f = open('output.mp4', 'rb')
       vids = mastodon.media_post(f.read(), 'video/mp4')
       mastodon.status_post(status=get_random_unicode(10), media_ids=vids['id'])
   if num == 8:
+      print('Tooting -> Noise image')
       os.system('ffmpeg -y -f rawvideo -video_size 100x100 -pixel_format yuv420p /dev/urandom -ar 48000 -ac 2 -f s16le -i /dev/urandom output.png')
       f = open('output.png', 'rb')
       vids = mastodon.media_post(f.read(), 'image/png')
