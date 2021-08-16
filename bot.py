@@ -24,6 +24,35 @@ mastodon = Mastodon(
 #    'goodpass123',
 #    to_file = '.secrets'
 #)
+def get_random_unicode(length):
+
+    try:
+        get_char = unichr
+    except NameError:
+        get_char = chr
+
+    # Update this to include code point ranges to be sampled
+    include_ranges = [
+        ( 0x0021, 0x0021 ),
+        ( 0x0023, 0x0026 ),
+        ( 0x0028, 0x007E ),
+        ( 0x00A1, 0x00AC ),
+        ( 0x00AE, 0x00FF ),
+        ( 0x0100, 0x017F ),
+        ( 0x0180, 0x024F ),
+        ( 0x2C60, 0x2C7F ),
+        ( 0x16A0, 0x16F0 ),
+        ( 0x0370, 0x0377 ),
+        ( 0x037A, 0x037E ),
+        ( 0x0384, 0x038A ),
+        ( 0x038C, 0x038C ),
+    ]
+
+    alphabet = [
+        get_char(code_point) for current_range in include_ranges
+            for code_point in range(current_range[0], current_range[1] + 1)
+    ]
+    return ''.join(random.choice(alphabet) for i in range(length))
 
 def tootuz(num):
   print(str(num))
@@ -63,7 +92,13 @@ def tootuz(num):
       os.system('ffmpeg -y -f rawvideo -video_size 100x100 -pixel_format yuv420p -framerate 25 -i /dev/urandom -ar 48000 -ac 2 -f s16le -i /dev/urandom -t 5 output.mp4')
       f = open('output.mp4', 'rb')
       vids = mastodon.media_post(f.read(), 'video/mp4')
-      mastodon.status_post(status='Vid', media_ids=vids['id'])
+      mastodon.status_post(status=get_random_unicode(10), media_ids=vids['id'])
+  if num == 8:
+      os.system('ffmpeg -y -f rawvideo -video_size 100x100 -pixel_format yuv420p /dev/urandom -ar 48000 -ac 2 -f s16le -i /dev/urandom output.png')
+      f = open('output.png', 'rb')
+      vids = mastodon.media_post(f.read(), 'image/png')
+      mastodon.status_post(status=get_random_unicode(10), media_ids=vids['id'])
+  
 
 def tootify(fart):
     print('Tooting -> ' + str(fart))
@@ -82,5 +117,5 @@ def tootify2(fart, media, mime):
         except Exception as e:
             print('FartError: ' + str(e))
 
-tootuz(random.randint(0, 7))
+tootuz(random.randint(0, 8))
 #tootuz(2)
