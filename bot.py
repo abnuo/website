@@ -99,7 +99,7 @@ def tootuz(num):
       os.system('ffmpeg -y -f rawvideo -s 100x100 -pixel_format yuv420p -i /dev/urandom output.png')
       f = open('output.png', 'rb')
       pics = mastodon.media_post(f.read(), 'image/png')
-      mastodon.status_post(status=get_random_unicode(10), media_ids=vids['pics'])
+      mastodon.status_post(status=get_random_unicode(10), media_ids=pics['id'])
 
 def tootify(fart):
     print('Tooting -> ' + str(fart))
