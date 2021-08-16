@@ -53,10 +53,12 @@ def tootuz(num):
       mastodon.status_post(status='De Imgur Has Spoken', media_ids=imgurpic['id'], sensitive=True)
   if num == 5:
       r = requests.get('https://yomomma-api.herokuapp.com/jokes')
-      tootify2(r.json['joke'], None, None)
+      penis = json.loads(r.text)
+      tootify2(penis['joke'], None, None)
   if num == 6:
       r = requests.get('https://api.kanye.rest/')
-      tootify2('A wise man once said this... ' + r.json['quote'], None, None)
+      penis = json.loads(r.text)
+      tootify2('A wise man once said this... ' + penis['quote'], None, None)
 
 def tootify(fart):
     print('Tooting -> ' + str(fart))
