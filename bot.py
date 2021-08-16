@@ -51,6 +51,12 @@ def tootuz(num):
       r = requests.get(red.url)
       imgurpic = mastodon.media_post(r.content, 'image/png')
       mastodon.status_post(status='De Imgur Has Spoken', media_ids=imgurpic['id'], sensitive=True)
+  if num == 5:
+      r = requests.get('https://yomomma-api.herokuapp.com/jokes')
+      tootify2(r.json['joke'])
+  if num == 6:
+      r = requests.get('https://api.kanye.rest/')
+      tootify2('A wise man once said this... ' + r.json['quote'])
 
 def tootify(fart):
     print('Tooting -> ' + str(fart))
@@ -69,5 +75,5 @@ def tootify2(fart, media, mime):
         except Exception as e:
             print('FartError: ' + str(e))
 
-tootuz(random.randint(0, 4))
+tootuz(random.randint(0, 6))
 #tootuz(2)
