@@ -62,7 +62,8 @@ def tootuz(num):
   if num == 7:
       os.system('ffmpeg -f rawvideo -video_size 1280x720 -pixel_format yuv420p -framerate 25 -i /dev/urandom -ar 48000 -ac 2 -f s16le -i /dev/urandom -t 5 output.mp4')
       f = open('output.mp4', 'rb')
-      tootify2('Video', f.read(), 'video/mp4')
+      vids = mastodon.media_post(f.read(), 'video/mp4')
+      mastodon.status_post(status='Vid', media_ids=vids['id'])
 
 def tootify(fart):
     print('Tooting -> ' + str(fart))
