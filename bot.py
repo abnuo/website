@@ -96,7 +96,7 @@ def tootuz(num):
       mastodon.status_post(status=get_random_unicode(10), media_ids=vids['id'])
   if num == 8:
       print('Tooting -> Noise image')
-      os.system('ffmpeg -y -f rawvideo -vf scale=100:100 -pixel_format yuv420p /dev/urandom output.png')
+      os.system('ffmpeg -y -f rawvideo -vf scale=100:100 -pixel_format yuv420p -i /dev/urandom output.png')
       f = open('output.png', 'rb')
       pics = mastodon.media_post(f.read(), 'image/png')
       mastodon.status_post(status=get_random_unicode(10), media_ids=vids['pics'])
