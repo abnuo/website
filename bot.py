@@ -45,7 +45,7 @@ def tootuz(num):
       tootify2('New Human!', r.content, 'image/jpeg')
   if num == 3:
       r = requests.get("https://v2.jokeapi.dev/joke/Programming,Miscellaneous?format=txt")
-      tootify2(r.text)
+      tootify2(r.text, None, None)
   if num == 4:
       red = requests.get('https://abnuosite.herokuapp.com/imgur2.php')
       r = requests.get(red.url)
@@ -53,10 +53,10 @@ def tootuz(num):
       mastodon.status_post(status='De Imgur Has Spoken', media_ids=imgurpic['id'], sensitive=True)
   if num == 5:
       r = requests.get('https://yomomma-api.herokuapp.com/jokes')
-      tootify2(r.json['joke'])
+      tootify2(r.json['joke'], None, None)
   if num == 6:
       r = requests.get('https://api.kanye.rest/')
-      tootify2('A wise man once said this... ' + r.json['quote'])
+      tootify2('A wise man once said this... ' + r.json['quote'], None, None)
 
 def tootify(fart):
     print('Tooting -> ' + str(fart))
