@@ -47,7 +47,7 @@ def tootuz(num):
       r = requests.get("https://v2.jokeapi.dev/joke/Programming,Miscellaneous?format=txt")
       tootify2(r.text)
   if num == 4:
-      red = requests.get(https://abnuosite.herokuapp.com/imgur2.php)
+      red = requests.get('https://abnuosite.herokuapp.com/imgur2.php')
       r = requests.get(red.url)
       imgurpic = mastodon.media_post(r.content, 'image/png')
       mastodon.status_post(status='De Imgur Has Spoken', media_ids=imgurpic['id'], sensitive=True)
