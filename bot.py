@@ -43,6 +43,14 @@ def tootuz(num):
       r = requests.get('https://thispersondoesnotexist.com/image')
       mastodon.account_update_credentials(avatar=r.content, avatar_mime_type = 'image/jpeg', fields=[('unix', str(time.time()))])
       tootify2('New Human!', r.content, 'image/jpeg')
+  if num == 3:
+      r = requests.get("https://v2.jokeapi.dev/joke/Programming,Miscellaneous?format=txt")
+      tootify2(r.text)
+  if num == 4:
+      red = requests.get(https://abnuosite.herokuapp.com/imgur2.php)
+      r = requests.get(red.url)
+      imgurpic = mastodon.media_post(r.content, 'image/png')
+      mastodon.status_post(status='De Imgur Has Spoken', media_ids=imgurpic['id'], sensitive=True)
 
 def tootify(fart):
     print('Tooting -> ' + str(fart))
@@ -61,5 +69,5 @@ def tootify2(fart, media, mime):
         except Exception as e:
             print('FartError: ' + str(e))
 
-tootuz(random.randint(0, 2))
+tootuz(random.randint(0, 4))
 #tootuz(2)
