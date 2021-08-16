@@ -3,9 +3,15 @@ import random
 import requests
 import time
 import os
+import json
 
 describy = ["awesome", "cool", "swag", "amazing"]
 kats = ["cat", "kat", "kitty"]
+
+f = open('bot_config.json','r') 
+
+bot_config = json.load(f)
+tootdur = bot_config['dur']
 
 mastodon = Mastodon(
     client_id = os.environ['client_id'],
@@ -57,6 +63,6 @@ def tootify2(fart, media, mime):
 
 while True:
     tootuz(random.randint(0, 2))
-    time.sleep(10)
+    time.sleep(tootdur)
 
 #tootuz(2)
