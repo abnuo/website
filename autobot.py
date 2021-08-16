@@ -3,7 +3,7 @@ import os
 import time
 
 f = open('bot_config.json', 'r')
-config = json.loads(f)
+config = json.loads(f.read())
 dur = config['dur']
 
 while True:
