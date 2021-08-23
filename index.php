@@ -16,11 +16,16 @@ p {
 <h1>Website, explore eyes 👀</h1>
 <a href="/google.php">ProxyDeGoogle</a> <a href="https://sexy-voice-19912.pktriot.net">My otWOAJQ A Z WI AN A(ma a  fi/e)</a> <a href="https://Poopy.herokuapp.com/"> Poop Emoji</a> <a href="/imgur2.php">Imgur Sexay</a>
 <?php
-$poop = array("Free", "XXX", "Porn", "Rule34", "Tits", "Ass", "3gp", "video");
+$poop = array("Penis", "mario", "silly", "crazy", "funny", "videos", "3gp", "to");
 shuffle($poop);
 $penis = implode(" ", $poop);
 echo "<p>$penis</p>";
 ?>
+<form action="message.php" method="post">
+  Change De X-Message HeaDer YaY
+  <input type="text" name="message" id="message">
+  <input type="submit" value="submit" name="submit">
+</form>
 <?php
 $word = explode('"]', explode('["', file_get_contents("https://random-word-api.herokuapp.com/word"))[1])[0];
 $word2 = explode('"]', explode('["', file_get_contents("https://random-word-api.herokuapp.com/word"))[1])[0];
