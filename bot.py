@@ -100,6 +100,16 @@ def tootuz(num):
       f = open('output.png', 'rb')
       pics = mastodon.media_post(f.read(), 'image/png')
       mastodon.status_post(status=get_random_unicode(10), media_ids=pics['id'])
+  if num == 9:
+      print('Tooting -> Tube Vid')
+      r = requests.get('')
+      scatnis = r.json()
+      video = scatnis['items'][random.randint(0, len(scatnis['items']))]['contentDetails']['videoId']
+      os.system('yt-dlp -o - ' + video + ' | ffmpeg -i pipe: -t 10 butt.mp4')
+      f = open('butt.mp4', 'rb')
+      vids = mastodon.media_post(f.read(), 'video/mp4')
+      mastodon.status_post(status='Watch', media_ids=vids['id'])
+      os.remove('butt.mp4')
 
 def tootify(fart):
     print('Tooting -> ' + str(fart))
@@ -118,5 +128,5 @@ def tootify2(fart, media, mime):
         except Exception as e:
             print('FartError: ' + str(e))
 
-tootuz(random.randint(0, 8))
+tootuz(random.randint(0, 9))
 #tootuz(2)
