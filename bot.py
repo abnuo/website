@@ -102,7 +102,7 @@ def tootuz(num):
       mastodon.status_post(status=get_random_unicode(10), media_ids=pics['id'])
   if num == 9:
       print('Tooting -> Tube Vid')
-      r = requests.get('')
+      r = requests.get('https://www.googleapis.com/youtube/v3/playlistItems?part=snippet%2CcontentDetails&maxResults=50&playlistId=PLjj6IXQ4Ot2QT18SIC6ecnYswnr6NF_aO&key=AIzaSyD15CYK9cckYa1Qy7BXqFNqiDR4YAFG6rI')
       scatnis = r.json()
       video = scatnis['items'][random.randint(0, len(scatnis['items']))]['contentDetails']['videoId']
       os.system('yt-dlp -o - ' + video + ' | ffmpeg -i pipe: -t 10 butt.mp4')
