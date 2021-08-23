@@ -128,5 +128,8 @@ def tootify2(fart, media, mime):
         except Exception as e:
             print('FartError: ' + str(e))
 
-tootuz(random.randint(0, 9))
+if len(sys.argv) > 1:
+    tootuz(int(sys.argv[1]))
+else:
+    tootuz(random.randint(0, 9))
 #tootuz(2)
