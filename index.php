@@ -32,6 +32,7 @@ $word2 = explode('"]', explode('["', file_get_contents("https://random-word-api.
 $domain = "http://$word.com/";
 echo "<p>CONGRATS! You are lucky today.. You have won a $word $word2! Clicky click! <a href=\"$domain\">Your surprise!</a></p>";
 ?>
+<?php include 'chat.php'; ?>
 <p>Look at this nsf player dos it work or No</p>
 <script src="libgme/libgme.js"></script>
 <script src="index.js"></script>
