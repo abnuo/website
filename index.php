@@ -4,12 +4,20 @@
 <?php include 'lukey.php'; ?>
 <title>2021 WebVisit</title>
 <style>
-body {
-  background-image: url('CuteAndFannyInflation.jpeg');
-}
-p {
-  color: red;
-}
+            .Bruhio {
+                margin:4px, 4px;
+                padding:4px;
+                background-image: none;
+                background-color: green;
+                width: 500px;
+                height: 110px;
+                overflow-x: hidden;
+                overflow-y: auto;
+                text-align:justify;
+            }
+            .Bruhio p {
+               color: #0000000
+            }
 </style>
 </head>
 <body>
