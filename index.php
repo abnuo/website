@@ -50,7 +50,7 @@
     
     // Connection opened
     socket.addEventListener('open', function (event) {
-        socket.send('HelloI Am New Scatter');
+        socket.send('Hello, I Was Friend User!');
     });
 
     // Listen for messages
@@ -122,7 +122,7 @@
     }
     </script>
     <button onclick="myFunction()">Click. Me</button>
-    <h1 style="text-align:center">Hi Its meBRUHH BRUH BRUH BRUo</h1>
+    <h1 style="text-align:center">Explore eyes 👀</h1>
    
     <p>Web site</p>
     <a href="/google.php">ProxyDeGoogle</a> <a href="https://sexy-voice-19912.pktriot.net">My otLukeyma a  fi/e)</a> <a href="https://Poopy.herokuapp.com/"> Poop Emoji</a> <a href="/imgur2.php">Imgur Sexay</a>
@@ -146,24 +146,7 @@ $domain = "http://$word.com/";
 echo "<p>CONGRATS! You are lucky today.. You have won a $word $word2! Clicky click! <a href=\"$domain\">Your surprise!</a></p>";
 ?>
 <!-- Begin Chat -->
-<h1>Chat</h1>
-<div id="scat" class="Bruhio">
-</div>
-<textarea id="msg">Hey</textarea>
-<button onclick="penis()">Send</button>
-<p>Coler<p>
-<input type="color" id="bg" name="bg"
-           value="#008000">
-<input type="color" id="txt" name="txt"
-           value="#000000">
-<button onclick="color()">Change palette</button>
-<p>Or choose a theme:</p>
-<button onclick="theme1()">BruhDonld</button>
-<button onclick="theme2()">Yeety Sea</button>
-<button onclick="theme3()">Lukert</button>
-<button onclick="theme4()">ExE :devil:</button>
-<button onclick="theme5()">COLOR INVERTED :devil:</button>
-<button onclick="theme6()">Diabeto</button>
+<iframe width="480" height="450" src="https://abnuochat.neocities.org/"></iframe>
 <!-- end chat -->
   </body>
 </html>
