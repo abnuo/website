@@ -4,4 +4,5 @@ yt-dlp
 psycopg2
 corrscope
 mastodon.py
+asteval
 git+https://github.com/TexZK/oply.git
