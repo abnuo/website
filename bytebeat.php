@@ -10,5 +10,5 @@ function generateRandomString($length = 10) {
     return $randomString;
 }
 $filename = generateRandomString();
-shell_exec("python bytebeat.py " . $_GET["e"] . " " . $_["d"] . " | sox -traw -r8000 -b8 -e unsigned-integer $filename.wav");
+shell_exec("python bytebeat.py " . $_GET["e"] . " " . $_["d"] . " | ffmpeg -f u8 -ar 8000 -ac 1 -i :pipe $filename.wav");
 <?php echo("<a href=\"https://abnuosite.herokuapp.com/$filename.wav\">Your file</a>"); ?>
