@@ -10,6 +10,6 @@ function generateRandomString($length = 10) {
     return $randomString;
 }
 $filename = generateRandomString();
-shell_exec("python -c 'import sys;[sys.stdout.write(chr(" . $_GET["e"] . ")) for t in range(" . $_GET["d"] . ")]' " . "| ffmpeg -f u8 -ar 8000 -ac 1 -i :pipe $filename.wav");
+shell_exec("python -c 'import sys;[sys.stdout.write(chr(" . $_GET["e"] . ")) for t in range(" . $_GET["d"] . ")]'" . " | ffmpeg -f u8 -ar 8000 -ac 1 -i - $filename.wav");
 echo "<a href=\"https://abnuosite.herokuapp.com/$filename.wav\">Your file</a>"; 
 ?>
