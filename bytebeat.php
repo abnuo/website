@@ -11,4 +11,5 @@ function generateRandomString($length = 10) {
 }
 $filename = generateRandomString();
 shell_exec("python bytebeat.py " . $_GET["e"] . " " . $_["d"] . " | ffmpeg -f u8 -ar 8000 -ac 1 -i :pipe $filename.wav");
-<?php echo("<a href=\"https://abnuosite.herokuapp.com/$filename.wav\">Your file</a>"); ?>
+echo "<a href=\"https://abnuosite.herokuapp.com/$filename.wav\">Your file</a>"; 
+?>
