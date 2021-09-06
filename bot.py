@@ -60,14 +60,14 @@ def tootuz(num):
   if num == 0:
       tootus = "func1"
       tootify(tootus)
-      mastodon.toot(tootus)
+      mastodon.status_post(status="func1", visibility='unlisted')
   if num == 1:
       tootus = 'Check out my ' + random.choice(describy) + ' ' + random.choice(kats)
       kitty = requests.get("https://thiscatdoesnotexist.com")
       kittyjson = mastodon.media_post(kitty.content, 'image/png')
       print(kittyjson)
       tootify(tootus)
-      mastodon.status_post(status=tootus, media_ids=kittyjson['id'])
+      mastodon.status_post(status=tootus, media_ids=kittyjson['id'], visibility='unlisted')
   if num == 2:
       print('Grabbing fake human.')
       r = requests.get('https://thispersondoesnotexist.com/image')
@@ -80,7 +80,7 @@ def tootuz(num):
       red = requests.get('https://abnuosite.herokuapp.com/imgur2.php')
       r = requests.get(red.url)
       imgurpic = mastodon.media_post(r.content, 'image/png')
-      mastodon.status_post(status='De Imgur Has Spoken', media_ids=imgurpic['id'], sensitive=True)
+      mastodon.status_post(status='De Imgur Has Spoken', media_ids=imgurpic['id'], visibility='unlisted', sensitive=True)
   if num == 5:
       r = requests.get('https://yomomma-api.herokuapp.com/jokes')
       penis = json.loads(r.text)
@@ -94,13 +94,13 @@ def tootuz(num):
       os.system('ffmpeg -y -f rawvideo -video_size 100x100 -pixel_format yuv420p -framerate 25 -i /dev/urandom -ar 48000 -ac 2 -f s16le -i /dev/urandom -t 5 output.mp4')
       f = open('output.mp4', 'rb')
       vids = mastodon.media_post(f.read(), 'video/mp4')
-      mastodon.status_post(status=get_random_unicode(10), media_ids=vids['id'])
+      mastodon.status_post(status=get_random_unicode(10), media_ids=vids['id'], visibility='unlisted')
   if num == 8:
       print('Tooting -> Noise image')
       os.system('ffmpeg -y -f rawvideo -s 100x100 -pixel_format yuv420p -i /dev/urandom output.png')
       f = open('output.png', 'rb')
       pics = mastodon.media_post(f.read(), 'image/png')
-      mastodon.status_post(status=get_random_unicode(10), media_ids=pics['id'])
+      mastodon.status_post(status=get_random_unicode(10), media_ids=pics['id'], visibility='unlisted')
   if num == 9:
       print('Tooting -> Tube Vid')
       r = requests.get('https://www.googleapis.com/youtube/v3/playlistItems?part=snippet%2CcontentDetails&maxResults=50&playlistId=PLjj6IXQ4Ot2QT18SIC6ecnYswnr6NF_aO&key=AIzaSyD15CYK9cckYa1Qy7BXqFNqiDR4YAFG6rI')
@@ -109,7 +109,7 @@ def tootuz(num):
       os.system('yt-dlp -o - ' + video + ' | ffmpeg -i pipe: -t 10 butt.mp4')
       f = open('butt.mp4', 'rb')
       vids = mastodon.media_post(f.read(), 'video/mp4')
-      mastodon.status_post(status='Watch', media_ids=vids['id'])
+      mastodon.status_post(status='Watch', media_ids=vids['id'], visibility='unlisted')
       os.remove('butt.mp4')
 
 def tootify(fart):
@@ -119,13 +119,13 @@ def tootify2(fart, media, mime):
     print('Tooting -> ' + str(fart))
     if media == None:
         try:
-            mastodon.toot(fart)
+            mastodon.status_post(status=fart, visibility='unlisted')
         except Exception as e:
             print('FartError: ' + str(e))
     if media != None:
         try:
             mediaj = mastodon.media_post(media, mime)
-            mastodon.status_post(status=fart, media_ids=mediaj['id'])
+            mastodon.status_post(status=fart, media_ids=mediaj['id'], visibility='unlisted')
         except Exception as e:
             print('FartError: ' + str(e))
 
