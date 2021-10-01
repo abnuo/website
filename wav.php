@@ -7,7 +7,7 @@ $bytesStr = pack('C*', ...$bytes);
 fwrite($temp, ".snd");
 // fwrite($temp, $bytesStr);
 file_put_contents($temp, $bytesStr);
-for ($t = 0; $t <= $samples; $x++) {
+for ($t = 0; $t <= $samples; $t++) {
   fputs($temp, chr($t));
 }
 fseek($temp, 0);
