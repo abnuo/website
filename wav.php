@@ -14,9 +14,16 @@ echo ".snd";
 // fwrite($temp, $bytesStr);
 //file_put_contents($temp, $bytesStr);
 echo $bytesStr;
-for ($t = 0; $t <= $samples; $t++) {
-  //fputs($temp, chr($t));
-  echo chr(c($t));
+if ($samples > 0) {
+  for ($t = 0; $t <= $samples; $t++) {
+    //fputs($temp, chr($t));
+    echo chr(c($t));
+  } 
+} else {
+    for ($t = 0; $t++) {
+      //fputs($temp, chr($t));
+      echo chr(c($t));
+    }
 }
 //fseek($temp, 0);
 //echo file_get_contents($temp);
