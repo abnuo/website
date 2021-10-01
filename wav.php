@@ -20,7 +20,7 @@ if ($samples > 0) {
     echo chr(c($t));
   } 
 } else {
-    for ($t = 0; $t++) {
+    for ($t = 0; $t++;) {
       //fputs($temp, chr($t));
       echo chr(c($t));
     }
