@@ -1,5 +1,6 @@
 <?php
 header('Content-Type: audio/basic');
+header('Content-Disposition: attachment; filename="audio.au"');
 $temp = tmpfile();
 $samples = 192000;
 $bytes = [0, 0, 0, 32, 1, 72, 162, 24, 0, 0, 0, 2, 0, 0, 31, 64, 0, 0, 0, 1];
