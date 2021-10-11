@@ -145,6 +145,14 @@ $word2 = explode('"]', explode('["', file_get_contents("https://random-word-api.
 $domain = "http://$word.com/";
 echo "<p>CONGRATS! You are lucky today.. You have won a $word $word2! Clicky click! <a href=\"$domain\">Your surprise!</a></p>";
 ?>
+<script src="https://raw.githubusercontent.com/deskjet/chiptune2.js/master/libopenmpt.js">
+<script src="https://gist.githubusercontent.com/photonstorm/87df3c595879cb1620ed6d8a232e213a/raw/c635860d257a414895835cd707727448d9ed348a/chiptune2-iOS.js">
+<script>
+var player = new ChiptuneJsPlayer(new ChiptuneJsConfig(-1));
+player.load('mods/tim5.mod', function(buffer) {
+   player.play(buffer);
+ });
+</script>
 <!-- Begin Chat -->
 <iframe width="480" height="450" src="https://abnuochat.neocities.org/"></iframe>
 <!-- end chat -->
