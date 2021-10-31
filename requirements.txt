@@ -1,5 +1,6 @@
 requests
 bs4
+scratchclient
 yt-dlp
 psycopg2
 corrscope
