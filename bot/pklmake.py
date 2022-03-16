@@ -1,5 +1,6 @@
 import twitter_selenium
 import pickle
+import os
 
 def getsession():
   if not os.path.isfile("session.pkl"):
