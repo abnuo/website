@@ -13,4 +13,5 @@ def getsession():
   else:
     f = open("session.pkl","rb")
     session = twitter.selenium(cookies=pickle.load(f),driver="chrome",options=options)
+  print(session.driver.execute_script("return navigator.userAgent"))
   return session
