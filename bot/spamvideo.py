@@ -22,12 +22,12 @@ def genTaD(query):
 
 instance = "searx.projectlounge.pw"
 if not os.path.isfile("session.pkl"):
-  session = twitter_selenium.TwitterSession(os.environ[""],os.environ[""])
+  session = twitter_selenium.TwitterSession(os.environ[""],os.environ[""],driver="chrome")
   f = open("session.pkl","wb")
   pickle.dump(session.cookies,f)
 else:
   f = open("session.pkl","rb")
-  session = twitter.selenium(cookies=pickle.load(f))
+  session = twitter.selenium(cookies=pickle.load(f),driver="chrome")
 tr = requests.get("https://twitter-trends.iamrohit.in/united-states")
 soup = BeautifulSoup(tr.text)
 tweets = soup.find_all("a",{"class": "tweet"})
