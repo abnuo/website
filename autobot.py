@@ -2,6 +2,7 @@ import json
 import os
 import time
 import glob
+import random
 
 scripts = glob.glob("bot/*.py")
 script = random.choice(scripts)
