@@ -6,7 +6,7 @@ options = Options()
 options.add_argument("--window-size=1920,1080"); 
 options.add_argument("--disable-gpu"); 
 options.add_argument("-- disable-extensions"); 
-options.add_experimental_option("useAutomationExtension", false); 
+options.add_experimental_option("useAutomationExtension", False); 
 options.add_argument("--proxy-server='direct://'"); 
 options.add_argument("--proxy-bypass-list=*"); 
 options.add_argument("--start-maximized"); 
