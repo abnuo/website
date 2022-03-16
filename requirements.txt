@@ -7,3 +7,4 @@ corrscope
 mastodon.py
 asteval
 git+https://github.com/TexZK/oply.git
+git+https://github.com/abnuo/twitter-selenium.git
