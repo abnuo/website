@@ -1,8 +1,11 @@
 import json
 import os
 import time
+import glob
 
-command = "python bot.py & python newmaker.py"
+scripts = glob.glob("bot/*.py")
+script = random.choice(scripts)
+command = f"python {script}"
 f = open('bot_config.json', 'r')
 config = json.loads(f.read())
 dur = config['dur']
