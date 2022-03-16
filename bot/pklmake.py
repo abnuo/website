@@ -9,3 +9,4 @@ def getsession():
   else:
     f = open("session.pkl","rb")
     session = twitter.selenium(cookies=pickle.load(f),driver="chrome")
+  return session
