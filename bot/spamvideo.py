@@ -21,7 +21,6 @@ def genTaD(query):
   return tad
 
 instance = "searx.projectlounge.pw"
-f = open("session.pkl","rb")
 session = pklmake.getsession()
 tr = requests.get("https://twitter-trends.iamrohit.in/united-states")
 soup = BeautifulSoup(tr.text)
