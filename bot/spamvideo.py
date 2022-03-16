@@ -3,7 +3,6 @@ import glob
 import json
 import requests
 import base64
-import twitter_selenium
 import shlex
 import subprocess
 import mimetypes
@@ -11,6 +10,7 @@ import imghdr
 import random
 import time
 import pickle
+import pklmake
 from urllib.parse import quote, unquote, urlparse
 from bs4 import BeautifulSoup
 
@@ -22,7 +22,7 @@ def genTaD(query):
 
 instance = "searx.projectlounge.pw"
 f = open("session.pkl","rb")
-session = twitter.selenium(cookies=pickle.load(f),driver="chrome")
+session = pklmake.getsession()
 tr = requests.get("https://twitter-trends.iamrohit.in/united-states")
 soup = BeautifulSoup(tr.text)
 tweets = soup.find_all("a",{"class": "tweet"})
