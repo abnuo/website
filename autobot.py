@@ -12,6 +12,6 @@ config = json.loads(f.read())
 dur = config['dur']
 
 os.remove("bot/images/delete.me")
-while True:
-    os.system(command)
-    time.sleep(dur)
+#while True:
+#    os.system(command)
+#    time.sleep(dur)
