@@ -6,14 +6,14 @@ $temp = tmpfile();
 $samples = intval($_GET["s"]);
 //header is something like this: $header = [779316836,(offset to audio data),(filesize),(encoding),(sample rate),(channels)];
 $header = [779316836,24,4294967295,2,8000,1];
-$bytesStr = pack("N*",...$header);
+$headerStr = pack("N*",...$header);
 //fwrite($temp, ".snd");
 function c($t) {
   return $t*((($t>>12)|($t>>8))&(63&($t>>4)));
 }
 // fwrite($temp, $bytesStr);
 //file_put_contents($temp, $bytesStr);
-echo $header;
+echo $headerStr;
 if ($samples > 0) {
   for ($t = 0; $t <= $samples; $t++) {
     //fputs($temp, chr($t));
