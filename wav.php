@@ -4,9 +4,9 @@ header('Content-Disposition: attachment; filename="audio.au"');
 $temp = tmpfile();
 //$samples = 192000;
 $samples = intval($_GET["s"]);
-//header is something like this: $bytes = [0, 0, 0, 32, 1, 72, 162, 24, 0, 0, 0, format(1-17), 0, 0, 31, 64, 0, 0, 0, channels(0-1)];
-$bytes = [0, 0, 0, 32, 1, 72, 162, 24, 0, 0, 0, 2, 0, 0, 31, 64, 0, 0, 0, 1];
-$bytesStr = pack('C*', ...$bytes);
+//header is something like this: $header = [779316836,(offset to audio data),(filesize),(encoding),(sample rate),(channels)];
+$header = [779316836,24,4294967295,2,8000,1];
+$bytesStr = pack("N*",...$header);
 //fwrite($temp, ".snd");
 function c($t) {
   return $t*((($t>>12)|($t>>8))&(63&($t>>4)));
@@ -14,7 +14,7 @@ function c($t) {
 echo ".snd";
 // fwrite($temp, $bytesStr);
 //file_put_contents($temp, $bytesStr);
-echo $bytesStr;
+echo $header;
 if ($samples > 0) {
   for ($t = 0; $t <= $samples; $t++) {
     //fputs($temp, chr($t));
