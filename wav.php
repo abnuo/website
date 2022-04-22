@@ -11,7 +11,6 @@ $bytesStr = pack("N*",...$header);
 function c($t) {
   return $t*((($t>>12)|($t>>8))&(63&($t>>4)));
 }
-echo ".snd";
 // fwrite($temp, $bytesStr);
 //file_put_contents($temp, $bytesStr);
 echo $header;
