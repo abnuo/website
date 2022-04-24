@@ -46,7 +46,7 @@ foreach($results as $i) {
 		echo "<p>".htmlspecialchars($i["desc"])."</p>";
 	}
 	if(isset($i["media"])) {
-		echo "<br><img src=\"".$i["media"]."\" alt=\"".htmlspecialchars($i["title"])."\" width=\"500\">";
+		echo "<br><img src=\"".$i["media"]."\" alt=\"".htmlspecialchars($i["title"])."\" width=\"200\">";
 	}
 	echo "</div>";
 }
