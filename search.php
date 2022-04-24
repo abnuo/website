@@ -7,9 +7,9 @@ function search(string $q,string $keyword="web",int $page=1) {
 	$response = json_decode(file_get_contents("https://api.qwant.com/v3/search/".$keyword."?q=".urlencode($q)."&count=10&offset=".strval(($page-1)*10)."&locale=en_us",false,$context),true);
 	$results = [];
 	if($keyword == "web") {
-		foreach($response["data"]["result"]["items"]["mainline"][0] as $row) {
-			if(gettype($row) == "array") {
-				foreach($row as $i) {
+		foreach($response["data"]["result"]["items"]["mainline"] as $row) {
+			if(gettype($row) == "array" && $row["type"] == "web") {
+				foreach($row["items"] as $i) {
 					array_push($results,$i);
 				}
 			}
